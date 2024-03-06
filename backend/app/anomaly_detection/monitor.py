@@ -7,7 +7,7 @@ async def monitor_system():
     while True:
         cpu_usage = await check_cpu_anomaly()
         memory_usage = await check_memory_anomaly()
-        disk_usage = check_disk_usage()
+        disk_usage = await check_disk_usage()
 
         print(f"CPU usage: {cpu_usage}")
         print(f"Memory usage: {memory_usage}")
